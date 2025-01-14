@@ -53,7 +53,7 @@ app.get('/api/users', (req, res) => {
   });
 });
 
-app.post('/api/users/:id/exercises', (req, res) => {
+app.post('/api/users/:_id/exercises', (req, res) => {
   console.log(req.body);
 
   let userId = req.params._id;
@@ -89,7 +89,7 @@ app.post('/api/users/:id/exercises', (req, res) => {
   });
 });
 
-app.get('/api/users/:id/logs', (req, res) => {
+app.get('/api/users/:_id/logs', (req, res) => {
 
   let fromParam = req.query.from;
   let toParam = req.query.to;
@@ -153,7 +153,7 @@ app.get('/api/users/:id/logs', (req, res) => {
   })
 })
 
-// da continuare
+
 
 const listener = app.listen(process.env.PORT || 3000, () => {
   console.log('Your app is listening on port ' + listener.address().port)
